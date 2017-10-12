@@ -70,33 +70,31 @@ extern "C"
  *----------------------------------------------------------------------------*/
 
 // Number of pins defined in PinDescription array
-#define PINS_COUNT           (25u)
+#define PINS_COUNT           (46u)
 #define NUM_DIGITAL_PINS     (20u)
-#define NUM_TOTAL_PINS       (40u)
-#define NUM_ANALOG_INPUTS    (6u)
+#define NUM_TOTAL_PINS       (46u)
+#define NUM_ANALOG_INPUTS    (8u)
 #define NUM_ANALOG_OUTPUTS   (2u)
 #define analogInputToDigitalPin(p)  ((p < 6u) ? (p) + 14u : -1)
 
 // LEDs
-#define PIN_LED_13           (13u)
-#define PIN_LED_RXL          (38u)
-#define PIN_LED_TXL          (26u)
-#define PIN_LED              PIN_LED_13
-#define PIN_LED2             PIN_LED_RXL
-#define PIN_LED3             PIN_LED_TXL
-#define LED_BUILTIN          PIN_LED_13
+#define PIN_LED              (28u)
+#define LED_BUILTIN          PIN_LED
 
 /*
  * Analog pins
  */
-#define PIN_A0               (14u)
-#define PIN_A1               (15u)
-#define PIN_A2               (16u)
-#define PIN_A3               (17u)
-#define PIN_A4               (18u)
-#define PIN_A5               (19u)
-#define PIN_DAC0             (14u)
-#define PIN_DAC1             (15u)
+#define PIN_A0               (16u)
+#define PIN_A1               (17u)
+#define PIN_A2               (18u)
+#define PIN_A3               (19u)
+#define PIN_A4               (20u)
+#define PIN_A5               (21u)
+#define PIN_A6               (22u)
+#define PIN_A7               (33u)
+#define PIN_A8               (34u)
+#define PIN_DAC0             (18u)
+//#define PIN_DAC1             (15u)
 
 static const uint8_t A0  = PIN_A0;
 static const uint8_t A1  = PIN_A1;
@@ -104,19 +102,20 @@ static const uint8_t A2  = PIN_A2;
 static const uint8_t A3  = PIN_A3;
 static const uint8_t A4  = PIN_A4;
 static const uint8_t A5  = PIN_A5;
+static const uint8_t A6  = PIN_A6;
+static const uint8_t A7  = PIN_A7;
+static const uint8_t A8  = PIN_A8;
 static const uint8_t DAC0 = PIN_DAC0;
-static const uint8_t DAC1 = PIN_DAC1;
+//static const uint8_t DAC1 = PIN_DAC1;
 #define ADC_RESOLUTION		12
 #define DAC_RESOLUTION		12
 
 // Other pins
 
-#define PIN_BUTTON           (39u)
+#define PIN_BUTTON           (36u)
 static const uint8_t BUTTON = PIN_BUTTON;
 
-#define PIN_ATN              (38u)
-static const uint8_t ATN = PIN_ATN;
-
+// FIXME check all interface pin numbers
 /*
  * Serial interfaces
  */
