@@ -505,3 +505,91 @@ NUCLEO-L476RG.menu.opt.o2.build.flags.ldspecs=
 NUCLEO-L476RG.menu.opt.o3=Fastest
 NUCLEO-L476RG.menu.opt.o3.build.flags.optimize=-O3
 NUCLEO-L476RG.menu.opt.o3.build.flags.ldspecs=
+
+# OtherUse sensor-board
+# ---------------------------------------
+OtherUse1-L433RC.name=OtherUse1-L433RC
+OtherUse1-L433RC.vid.0=0x0483
+OtherUse1-L433RC.pid.0=0x374b
+
+OtherUse1-L433RC.upload.tool=stm32l4_dfu
+OtherUse1-L433RC.upload.protocol=dfu
+OtherUse1-L433RC.upload.maximum_size=245760
+OtherUse1-L433RC.upload.use_1200bps_touch=true
+OtherUse1-L433RC.upload.wait_for_upload_port=false
+OtherUse1-L433RC.upload.native_usb=false
+
+OtherUse1-L433RC.build.mcu=cortex-m4
+OtherUse1-L433RC.build.f_cpu=80000000L
+OtherUse1-L433RC.build.board=STM32L4_OTHERUSE1
+OtherUse1-L433RC.build.arch=STM32L4
+OtherUse1-L433RC.build.core=stm32l4
+OtherUse1-L433RC.build.vid=0x0483
+OtherUse1-L433RC.build.pid=0x374b
+OtherUse1-L433RC.build.did=0xffff
+OtherUse1-L433RC.build.usb_manufacturer="OtherUse"
+OtherUse1-L433RC.build.usb_product="Sensor Board"
+OtherUse1-L433RC.build.extra_flags=-DSTM32L433xx -D__FPU_PRESENT=1 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mabi=aapcs -mslow-flash-data -fsingle-precision-constant {build.usb_flags} {build.dosfs_flags}
+OtherUse1-L433RC.build.ldscript=linker_scripts/STM32L433RC_FLASH.ld
+OtherUse1-L433RC.build.openocdscript=openocd_scripts/stm32l433rc_otheruse1.cfg
+OtherUse1-L433RC.build.variant=STM32L433RC-OtherUse1
+OtherUse1-L433RC.build.variant_system_libs="-L{runtime.platform.path}/system/STM32L4xx/Lib" "-L{runtime.platform.path}/system/CMSIS/Lib" -lstm32l433 -larm_cortexM4lf_math
+OtherUse1-L433RC.build.variant_system_include="-I{runtime.platform.path}/system/CMSIS/Include" "-I{runtime.platform.path}/system/CMSIS/Device/ST/STM32L4xx/Include" "-I{runtime.platform.path}/system/STM32L4xx/Include" 
+
+OtherUse1-L433RC.menu.usb.cdc=Serial
+OtherUse1-L433RC.menu.usb.cdc.build.usb_type=USB_TYPE_CDC
+OtherUse1-L433RC.menu.usb.cdc_msc=Serial + Mass Storage
+OtherUse1-L433RC.menu.usb.cdc_msc.build.usb_type=USB_TYPE_CDC_MSC
+OtherUse1-L433RC.menu.usb.cdc_hid=Serial + Keyboard + Mouse
+OtherUse1-L433RC.menu.usb.cdc_hid.build.usb_type=USB_TYPE_CDC_HID
+OtherUse1-L433RC.menu.usb.cdc_msc_hid=Serial + Mass Storage + Keyboard + Mouse
+OtherUse1-L433RC.menu.usb.cdc_msc_hid.build.usb_type=USB_TYPE_CDC_MSC_HID
+OtherUse1-L433RC.menu.usb.cdc_dap=Serial + CMSIS-DAP
+OtherUse1-L433RC.menu.usb.cdc_dap.build.usb_type=USB_TYPE_CDC_DAP
+OtherUse1-L433RC.menu.usb.cdc_msc_dap=Serial + Mass Storage + CMSIS-DAP
+OtherUse1-L433RC.menu.usb.cdc_msc_dap.build.usb_type=USB_TYPE_CDC_MSC_DAP
+OtherUse1-L433RC.menu.usb.none=No USB
+OtherUse1-L433RC.menu.usb.none.build.usb_type=USB_TYPE_NONE
+
+OtherUse1-L433RC.menu.dosfs.none=None
+OtherUse1-L433RC.menu.dosfs.none.build.dosfs_sdcard=0
+OtherUse1-L433RC.menu.dosfs.none.build.dosfs_sflash=0
+OtherUse1-L433RC.menu.dosfs.sdspi=SDCARD (SPI)
+OtherUse1-L433RC.menu.dosfs.sdspi.build.dosfs_sdcard=1
+OtherUse1-L433RC.menu.dosfs.sdspi.build.dosfs_sflash=0
+
+OtherUse1-L433RC.menu.speed.80=80 MHz
+OtherUse1-L433RC.menu.speed.80.build.f_cpu=80000000L
+OtherUse1-L433RC.menu.speed.72=72 MHz
+OtherUse1-L433RC.menu.speed.72.build.f_cpu=72000000L
+OtherUse1-L433RC.menu.speed.64=64 MHz
+OtherUse1-L433RC.menu.speed.64.build.f_cpu=64000000L
+OtherUse1-L433RC.menu.speed.48=48 MHz
+OtherUse1-L433RC.menu.speed.48.build.f_cpu=48000000L
+OtherUse1-L433RC.menu.speed.32=32 MHz
+OtherUse1-L433RC.menu.speed.32.build.f_cpu=32000000L
+OtherUse1-L433RC.menu.speed.24=24 MHz
+OtherUse1-L433RC.menu.speed.24.build.f_cpu=24000000L
+OtherUse1-L433RC.menu.speed.16=16 MHz (No USB)
+OtherUse1-L433RC.menu.speed.16.build.f_cpu=16000000L
+OtherUse1-L433RC.menu.speed.8=8 MHz (No USB)
+OtherUse1-L433RC.menu.speed.8.build.f_cpu=8000000L
+OtherUse1-L433RC.menu.speed.4=4 MHz (No USB)
+OtherUse1-L433RC.menu.speed.4.build.f_cpu=4000000L
+OtherUse1-L433RC.menu.speed.2=2 MHz (No USB)
+OtherUse1-L433RC.menu.speed.2.build.f_cpu=2000000L
+OtherUse1-L433RC.menu.speed.1=1 MHz (No USB)
+OtherUse1-L433RC.menu.speed.1.build.f_cpu=1000000L
+
+OtherUse1-L433RC.menu.opt.os=Smallest Code
+OtherUse1-L433RC.menu.opt.os.build.flags.optimize=-Os
+OtherUse1-L433RC.menu.opt.os.build.flags.ldspecs=--specs=nano.specs
+OtherUse1-L433RC.menu.opt.o1=Fast
+OtherUse1-L433RC.menu.opt.o1.build.flags.optimize=-O1
+OtherUse1-L433RC.menu.opt.o1.build.flags.ldspecs=
+OtherUse1-L433RC.menu.opt.o2=Faster
+OtherUse1-L433RC.menu.opt.o2.build.flags.optimize=-O2
+OtherUse1-L433RC.menu.opt.o2.build.flags.ldspecs=
+OtherUse1-L433RC.menu.opt.o3=Fastest
+OtherUse1-L433RC.menu.opt.o3.build.flags.optimize=-O3
+OtherUse1-L433RC.menu.opt.o3.build.flags.ldspecs=

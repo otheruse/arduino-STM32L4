@@ -41,7 +41,7 @@
 #define STM32L4_CONFIG_SYSOPT             0
 
 
-#define STM32L4_CONFIG_USB_VBUS           GPIO_PIN_PB2
+#define STM32L4_CONFIG_USB_VBUS           GPIO_PIN_NONE
 
 #define STM32L4_CONFIG_DAP_SWCLK          GPIO_PIN_PB15
 #define STM32L4_CONFIG_DAP_SWDIO          GPIO_PIN_PB8
@@ -70,12 +70,12 @@ extern "C"
  *----------------------------------------------------------------------------*/
 
 // Number of pins defined in PinDescription array
-#define PINS_COUNT           (46u)
-#define NUM_DIGITAL_PINS     (20u)
-#define NUM_TOTAL_PINS       (46u)
+#define PINS_COUNT           (47u)
+#define NUM_DIGITAL_PINS     (38u)
+#define NUM_TOTAL_PINS       (47u)
 #define NUM_ANALOG_INPUTS    (8u)
 #define NUM_ANALOG_OUTPUTS   (2u)
-#define analogInputToDigitalPin(p)  ((p < 6u) ? (p) + 14u : -1)
+#define analogInputToDigitalPin(p)  ((p < 6u) ? (p) + 16u : ((p < 8) ? (p) + 26 : -1))
 
 // LEDs
 #define PIN_LED              (28u)
@@ -94,7 +94,7 @@ extern "C"
 #define PIN_A7               (33u)
 #define PIN_A8               (34u)
 #define PIN_DAC0             (18u)
-//#define PIN_DAC1             (15u)
+#define PIN_DAC1             (13u)
 
 static const uint8_t A0  = PIN_A0;
 static const uint8_t A1  = PIN_A1;
@@ -106,7 +106,7 @@ static const uint8_t A6  = PIN_A6;
 static const uint8_t A7  = PIN_A7;
 static const uint8_t A8  = PIN_A8;
 static const uint8_t DAC0 = PIN_DAC0;
-//static const uint8_t DAC1 = PIN_DAC1;
+static const uint8_t DAC1 = PIN_DAC1;
 #define ADC_RESOLUTION		12
 #define DAC_RESOLUTION		12
 
@@ -115,7 +115,6 @@ static const uint8_t DAC0 = PIN_DAC0;
 #define PIN_BUTTON           (36u)
 static const uint8_t BUTTON = PIN_BUTTON;
 
-// FIXME check all interface pin numbers
 /*
  * Serial interfaces
  */
@@ -125,24 +124,24 @@ static const uint8_t BUTTON = PIN_BUTTON;
 #define PIN_SERIAL1_RX       (0ul)
 #define PIN_SERIAL1_TX       (1ul)
 
-#define PIN_SERIAL2_RX       (31ul)
-#define PIN_SERIAL2_TX       (30ul)
+#define PIN_SERIAL2_RX       (6ul)
+#define PIN_SERIAL2_TX       (46ul)
 
-#define PIN_SERIAL3_RX       (8ul)
-#define PIN_SERIAL3_TX       (9ul)
+#define PIN_SERIAL3_RX       (2ul)
+#define PIN_SERIAL3_TX       (8ul)
 
 /*
  * SPI Interfaces
  */
 #define SPI_INTERFACES_COUNT 3
 
-#define PIN_SPI_MISO         (12u)
-#define PIN_SPI_MOSI         (11u)
-#define PIN_SPI_SCK          (13u)
+#define PIN_SPI_MISO         (31u)
+#define PIN_SPI_MOSI         (30u)
+#define PIN_SPI_SCK          (29u)
 
-#define PIN_SPI1_MISO        (22u)
-#define PIN_SPI1_MOSI        (23u)
-#define PIN_SPI1_SCK         (24u)
+#define PIN_SPI1_MISO        (11u)
+#define PIN_SPI1_MOSI        (12u)
+#define PIN_SPI1_SCK         (2u)
 
 #define PIN_SPI2_MISO        (4u)
 #define PIN_SPI2_MOSI        (5u)
@@ -156,38 +155,20 @@ static const uint8_t SCK  = PIN_SPI_SCK;
 /*
  * Wire Interfaces
  */
-#define WIRE_INTERFACES_COUNT 2
+#define WIRE_INTERFACES_COUNT 1
 
-#define PIN_WIRE_SDA         (20u)
-#define PIN_WIRE_SCL         (21u)
-
-#define PIN_WIRE1_SDA        (4u)
-#define PIN_WIRE1_SCL        (3u)
-
+#define PIN_WIRE_SDA         (14u)
+#define PIN_WIRE_SCL         (15u)
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
 
 /*
- * I2S Interfaces
- */
-#define I2S_INTERFACES_COUNT 2
-
-#define PIN_I2S_SCK          (2u)
-#define PIN_I2S_FS           (3u)
-#define PIN_I2S_SD           (4u)
-#define PIN_I2S_MCK          (5u)
-
-#define PIN_I2S1_SCK         (24u)
-#define PIN_I2S1_FS          (21u)
-#define PIN_I2S1_SD          (23u)
-#define PIN_I2S1_MCK         (22u)
-
-/*
  * USB
  */
-#define PIN_USB_VBUS         (27u)
-#define PIN_USB_DM           (28u)
-#define PIN_USB_DP           (29u)
+//#define PIN_USB_VBUS         (25u) // Pin 25 in V1.2 board!
+#define PIN_USB_VBUS         GPIO_PIN_NONE
+#define PIN_USB_DM           (22u)
+#define PIN_USB_DP           (23u)
 
 #define PWM_INSTANCE_COUNT   4
 
