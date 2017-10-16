@@ -510,7 +510,7 @@ NUCLEO-L476RG.menu.opt.o3.build.flags.ldspecs=
 # ---------------------------------------
 OtherUse1-L433RC.name=OtherUse1-L433RC
 OtherUse1-L433RC.vid.0=0x0483
-OtherUse1-L433RC.pid.0=0x374b
+OtherUse1-L433RC.pid.0=0x5740
 
 OtherUse1-L433RC.upload.tool=stm32l4_dfu
 OtherUse1-L433RC.upload.protocol=dfu
@@ -525,7 +525,7 @@ OtherUse1-L433RC.build.board=STM32L4_OTHERUSE1
 OtherUse1-L433RC.build.arch=STM32L4
 OtherUse1-L433RC.build.core=stm32l4
 OtherUse1-L433RC.build.vid=0x0483
-OtherUse1-L433RC.build.pid=0x374b
+OtherUse1-L433RC.build.pid=0x5740
 OtherUse1-L433RC.build.did=0xffff
 OtherUse1-L433RC.build.usb_manufacturer="OtherUse"
 OtherUse1-L433RC.build.usb_product="Sensor Board"
