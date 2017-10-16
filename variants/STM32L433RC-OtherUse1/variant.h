@@ -90,9 +90,8 @@ extern "C"
 #define PIN_A3               (19u)
 #define PIN_A4               (20u)
 #define PIN_A5               (21u)
-#define PIN_A6               (22u)
-#define PIN_A7               (33u)
-#define PIN_A8               (34u)
+#define PIN_A6               (33u)
+#define PIN_A7               (34u)
 #define PIN_DAC0             (18u)
 #define PIN_DAC1             (13u)
 
@@ -104,7 +103,6 @@ static const uint8_t A4  = PIN_A4;
 static const uint8_t A5  = PIN_A5;
 static const uint8_t A6  = PIN_A6;
 static const uint8_t A7  = PIN_A7;
-static const uint8_t A8  = PIN_A8;
 static const uint8_t DAC0 = PIN_DAC0;
 static const uint8_t DAC1 = PIN_DAC1;
 #define ADC_RESOLUTION		12
