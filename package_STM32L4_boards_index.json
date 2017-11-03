@@ -22,12 +22,12 @@
           "checksum": "MD5:7dfd8b9eb5ae4647d7a5bff0f99b78cc",
           "size": "16568238",
           "boards": [
+            {"name": "OtherUse1-L433RC"},
             {"name": "Dragonfly-L476RE"},
             {"name": "Butterfly-L433CC"},
             {"name": "Ladybug-L432KC"},
             {"name": "NUCLEO-L432KC"},
-            {"name": "NUCLEO-L476RG"},
-            {"name": "OtherUse1-L433RC"}
+            {"name": "NUCLEO-L476RG"}
           ],
           "toolsDependencies": [
             {
