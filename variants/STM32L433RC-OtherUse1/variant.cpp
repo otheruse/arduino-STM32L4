@@ -142,7 +142,7 @@ extern const unsigned int g_Serial3Instance = UART_INSTANCE_USART1;
 extern const unsigned int g_Serial3Mode = UART_MODE_RX_DMA | UART_MODE_TX_DMA;
 
 // SPI
-extern const stm32l4_spi_pins_t g_SPI2ins = { GPIO_PIN_PB15_SPI2_MOSI, GPIO_PIN_PB14_SPI2_MISO, GPIO_PIN_PB13_SPI2_SCK, GPIO_PIN_NONE };
+extern const stm32l4_spi_pins_t g_SPIPins = { GPIO_PIN_PB15_SPI2_MOSI, GPIO_PIN_PB14_SPI2_MISO, GPIO_PIN_PB13_SPI2_SCK, GPIO_PIN_NONE };
 extern const unsigned int g_SPIInstance = SPI_INSTANCE_SPI2;
 extern const unsigned int g_SPIMode = 0;
 
