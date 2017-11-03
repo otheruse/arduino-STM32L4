@@ -74,5 +74,5 @@
 
 ## Credits
 
-This core is based on the [Arduino SAMD Core](https://github.com/arduino/ArduinoCore-samd)
+This core is forked from the [GrumpyOldPizza](https://github.com/GrumpyOldPizza/arduino-STM32L4) repository, which is based on the [Arduino SAMD Core](https://github.com/arduino/ArduinoCore-samd)
 
