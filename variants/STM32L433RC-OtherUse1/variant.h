@@ -69,6 +69,54 @@ extern "C"
  *        Pins
  *----------------------------------------------------------------------------*/
 
+#define PA3		(0)
+#define PA2		(1)
+#define PA10	(2)
+#define PB3		(3)
+#define PB5		(4)
+#define PB4		(5)
+#define PB10	(6)
+#define PA8		(7)
+#define PA9		(8)
+#define PC7		(9)
+#define PB6		(10)
+#define PA7		(11)
+#define PA6		(12)
+#define PA5		(13)
+#define PB9		(14)
+#define PB8		(15)
+#define PA0		(16)
+#define PA1		(17)
+#define PA4		(18)
+#define PB0		(19)
+#define PC1		(20)
+#define PC0		(21)
+#define PA11	(22)
+#define PA12	(23)
+#define PA15	(24)
+#define PB1		(25)
+#define PB2		(26)
+#define PB7		(27)
+#define PB12	(28)
+#define PB13	(29)
+#define PB14	(30)
+#define PB15	(31)
+#define PC2		(32)
+#define PC3		(33)
+#define PC4		(34)
+#define PC5		(35)
+#define PC6		(36)
+#define PC8		(37)
+#define PC9		(38)
+#define PC10	(39)
+#define PC11	(40)
+#define PC12	(41)
+#define PC13	(42)
+#define PD2		(43)
+#define PH0		(44)
+#define PH1		(45)
+#define PB11	(46)
+
 // Number of pins defined in PinDescription array
 #define PINS_COUNT           (47u)
 #define NUM_DIGITAL_PINS     (38u)
@@ -78,7 +126,7 @@ extern "C"
 #define analogInputToDigitalPin(p)  ((p < 6u) ? (p) + 16u : ((p < 8) ? (p) + 26 : -1))
 
 // LEDs
-#define PIN_LED              (28u)
+#define PIN_LED              (PB12)
 #define LED_BUILTIN          PIN_LED
 
 /*
@@ -112,7 +160,6 @@ static const uint8_t DAC1 = PIN_DAC1;
 
 #define PIN_BUTTON           (36u)
 static const uint8_t BUTTON = PIN_BUTTON;
-
 /*
  * Serial interfaces
  */
@@ -133,19 +180,19 @@ static const uint8_t BUTTON = PIN_BUTTON;
  */
 #define SPI_INTERFACES_COUNT 3
 
-#define PIN_SPI_MISO         (31u)
-#define PIN_SPI_MOSI         (30u)
-#define PIN_SPI_SCK          (29u)
+#define PIN_SPI_MOSI         (PC12)
+#define PIN_SPI_MISO         (PC11)
+#define PIN_SPI_SCK          (PC10)
 
-#define PIN_SPI1_MISO        (11u)
-#define PIN_SPI1_MOSI        (12u)
-#define PIN_SPI1_SCK         (2u)
+#define PIN_SPI1_MISO        (PB4)
+#define PIN_SPI1_MOSI        (PB5)
+#define PIN_SPI1_SCK         (PB3)
 
-#define PIN_SPI2_MISO        (4u)
-#define PIN_SPI2_MOSI        (5u)
-#define PIN_SPI2_SCK         (3u)
+#define PIN_SPI2_MISO        (PA6)
+#define PIN_SPI2_MOSI        (PA7)
+#define PIN_SPI2_SCK         (PA1)
 
-static const uint8_t SS	  = 10;
+//static const uint8_t SS	  = 10;
 static const uint8_t MOSI = PIN_SPI_MOSI;
 static const uint8_t MISO = PIN_SPI_MISO;
 static const uint8_t SCK  = PIN_SPI_SCK;
@@ -155,8 +202,8 @@ static const uint8_t SCK  = PIN_SPI_SCK;
  */
 #define WIRE_INTERFACES_COUNT 1
 
-#define PIN_WIRE_SDA         (14u)
-#define PIN_WIRE_SCL         (15u)
+#define PIN_WIRE_SDA         (PB9)
+#define PIN_WIRE_SCL         (PB8)
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
 
