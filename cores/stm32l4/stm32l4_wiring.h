@@ -30,6 +30,7 @@
 #define _STM32L4_WIRING_
 
 #include <stdint.h>
+#include "wiring_time.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -47,32 +48,6 @@ static inline void interrupts(void)
 static inline  void noInterrupts(void)
 {
     __asm__ volatile ("cpsid i" : : : "memory");
-}
-
-static inline uint32_t millis(void) 
-{
-    return armv7m_systick_millis();
-}
-
-static inline uint32_t micros(void) 
-{
-    return armv7m_systick_micros();
-}
-
-static inline void delay(uint32_t msec) 
-{
-    if (msec == 0)
-	return;
-
-    armv7m_systick_delay(msec);
-}
-
-static inline void delayMicroseconds(uint32_t usec) 
-{
-    if (usec == 0)
-	return;
-
-    armv7m_core_udelay(usec);
 }
 
 extern void init(void);
